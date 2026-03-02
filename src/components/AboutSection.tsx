@@ -68,7 +68,7 @@ export default function AboutSection() {
               {group === "Programming Languages" ? (
                 <p className="text-sm text-muted-foreground">{group}</p>
               ) : null}
-              {group === "Frameworks & Tools" ? (
+              {group === "" ? (
                 <p className="text-sm text-muted-foreground">{group}</p>
               ) : null}
               <div className="flex flex-wrap gap-2">
