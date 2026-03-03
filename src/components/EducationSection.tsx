@@ -15,10 +15,10 @@ const education = {
     "Data Structures & Algorithms",
     "Object-Oriented Programming",
     "Intro to Machine Learning",
-    "Intro to Software Engineering",
     "Operating Systems",
     "Computer Networking",
     "Natural Language Processing",
+    "Bee Keeping 1"
   ],
   affiliations: [
     "AISES - Advancing Indigenous People in STEM",
@@ -33,7 +33,7 @@ export default function EducationSection() {
     <SectionShell id="education" className="space-y-6">
       <SectionHeading
         title="Education"
-        subtitle="University of Florida academic background, coursework, and affiliations."
+        subtitle=" "
       />
       <SurfaceCard className="space-y-6">
         <div className="space-y-4">
@@ -47,11 +47,11 @@ export default function EducationSection() {
             </p>
           </div>
         </div>
-        <div className="space-y-4 border-t border-border/60 pt-5">
+        <div className="space-y-5">
           <div className="space-y-2">
-            <p className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-[color:var(--panel-muted)]">
-              Relevant Coursework
-            </p>
+            <h3 className="text-lg font-semibold tracking-tight">
+              Coursework
+            </h3>
             <div className="flex flex-wrap gap-2">
               {education.coursework.map((item) => (
                 <Tag key={item}>{item}</Tag>
@@ -59,9 +59,9 @@ export default function EducationSection() {
             </div>
           </div>
           <div className="space-y-2">
-            <p className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-[color:var(--panel-muted)]">
+            <h3 className="text-lg font-semibold tracking-tight">
               Clubs & Affiliations
-            </p>
+            </h3>
             <div className="flex flex-wrap gap-2">
               {education.affiliations.map((item) => (
                 <Tag key={item}>{item}</Tag>

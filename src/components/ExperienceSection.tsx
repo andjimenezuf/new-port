@@ -34,7 +34,7 @@ export default function ExperienceSection() {
     <SectionShell id="experience" className="space-y-6">
       <SectionHeading
         title="Experience"
-        subtitle="Research and internships focused on AI systems, product engineering, and measurable delivery."
+        subtitle="Research and internships focused on AI systems, product engineering."
       />
       <div className="grid gap-4">
         {experiences.map((experience) => (

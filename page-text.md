@@ -41,14 +41,20 @@ This file captures the user-visible text from the page components and buttons, e
 
 - About Me
 - A first-generation University of Florida student aiming at technical work that blends rigorous engineering with fast iteration.
-- Get to know me
-- Hello, my name is Andres. I'm currently pursuing a B.S. in Computer Science with a Minor in Statistics at the University of Florida.
-- My strongest interests are software engineering, machine learning, data science, quantitative finance, and cloud systems. I prefer learning by shipping things that work, then iterating hard on them.
-- Outside of work, I enjoy music and cycling. The broader theme is the same: staying curious, building taste, and keeping momentum.
+- What I'm Studying
+- B.S. in Computer Science at the University of Florida
+- Minor in Statistics
+- Focused on building a strong base in systems, data, and applied machine learning
+- What I'm Into
+- I'm most interested in software engineering, cloud systems and scalable infrastructure, and AI/ML. I tend to learn best by building real things, testing them under pressure, and refining them through iteration.
+- Outside the Classroom
+- Music
+- Cycling
+- Staying curious and building taste through side projects and hobbies
 
-### Core Skills
+### Technical Skills
 
-- Core Skills
+- Technical Skills
 - Programming Languages
 - Python
 - JavaScript

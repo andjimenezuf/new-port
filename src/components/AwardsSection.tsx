@@ -36,7 +36,7 @@ export default function AwardsSection() {
     <SectionShell id="awards" className="space-y-6">
       <SectionHeading
         title="Awards & Scholarships"
-        subtitle="Scholarships and scholar programs recognizing academic performance, leadership, and career potential."
+        subtitle=" "
       />
       <div className={`grid gap-4 ${gridClass}`}>
         {awards.map((award) => (

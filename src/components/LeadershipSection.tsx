@@ -36,7 +36,7 @@ export default function LeadershipSection() {
     <SectionShell id="leadership" className="space-y-5">
       <SectionHeading
         title="Leadership & Professional Development"
-        subtitle="Leadership, mentorship, and student involvement across technical communities and applied machine learning work."
+        subtitle="Leadership, mentorship, and student involvement across technical communities."
       />
       <div className="grid gap-4">
         {involvement.map((item) => (
