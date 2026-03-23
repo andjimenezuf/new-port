@@ -1,6 +1,6 @@
 "use client"
 
-import React, { CSSProperties, ReactNode, useEffect, useRef } from "react"
+import React, { CSSProperties, ReactNode } from "react"
 
 import { cn } from "@/lib/utils"
 
@@ -42,10 +42,7 @@ function StarBackground({ color }: StarBackgroundProps) {
 interface StarButtonProps {
   children: ReactNode
   lightWidth?: number
-  duration?: number
   lightColor?: string
-  backgroundColor?: string
-  borderWidth?: number
   className?: string
   href?: string
   onClick?: React.MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>
@@ -57,60 +54,44 @@ interface StarButtonProps {
 export function StarButton({
   children,
   lightWidth = 110,
-  duration = 1.5,
   lightColor = "#FAFAFA",
-  backgroundColor = "currentColor",
-  borderWidth = 2,
   className,
   href,
   type = "button",
   ...props
 }: StarButtonProps) {
-  const pathRef = useRef<HTMLButtonElement | HTMLAnchorElement>(null)
-
-  useEffect(() => {
-    if (pathRef.current) {
-      const div = pathRef.current
-      div.style.setProperty(
-        "--path",
-        `path('M 0 0 H ${div.offsetWidth} V ${div.offsetHeight} H 0 V 0')`
-      )
-    }
-  }, [])
-
   const sharedStyle = {
-    "--duration": duration,
     "--light-width": `${lightWidth}px`,
     "--light-color": lightColor,
-    "--border-width": `${borderWidth}px`,
     isolation: "isolate",
   } as CSSProperties
 
   const sharedClassName = cn(
-    "group/star-button relative z-[3] inline-flex h-10 items-center justify-center gap-2 overflow-hidden rounded-3xl px-4 py-2 text-sm font-medium whitespace-nowrap transition-colors disabled:pointer-events-none disabled:opacity-50",
+    "group/star-button relative z-[3] inline-flex h-10 items-center justify-center gap-2 overflow-hidden rounded-3xl border border-slate-900/10 px-4 py-2 text-sm font-medium whitespace-nowrap text-slate-800 transition-all duration-200 hover:border-slate-900/16 hover:text-slate-950 disabled:pointer-events-none disabled:opacity-50 dark:border-[#f0d6a6]/20 dark:text-slate-100 dark:hover:border-[#f0d6a6]/30 dark:hover:text-white",
     className
   )
 
   const content = (
     <>
       <div
-        className="animate-star-btn absolute inset-0 aspect-square bg-[radial-gradient(ellipse_at_center,var(--light-color),transparent,transparent)]"
+        className="absolute left-1/2 top-1/2 h-[140%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,var(--light-color),transparent_68%)] opacity-75 blur-xl"
         style={
           {
-            offsetPath: "var(--path)",
-            offsetDistance: "0%",
             width: "var(--light-width)",
           } as CSSProperties
         }
+        aria-hidden="true"
       />
       <div
-        className="absolute inset-0 z-[4] overflow-hidden rounded-[inherit] border-black/10 text-white dark:border-white/15 dark:text-black"
-        style={{ borderWidth: "var(--border-width)" }}
+        className="absolute inset-0 z-[4] overflow-hidden rounded-[inherit] bg-[linear-gradient(180deg,rgba(255,255,255,0.86),rgba(244,238,229,0.92))] dark:bg-[linear-gradient(180deg,rgba(23,31,45,0.92),rgba(10,15,24,0.98))]"
         aria-hidden="true"
       >
-        <StarBackground color={backgroundColor} />
+        <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(242,214,162,0.14),rgba(170,202,255,0.08))] dark:bg-[linear-gradient(135deg,rgba(242,214,162,0.08),rgba(124,166,255,0.12))]" />
+        <div className="absolute inset-0 opacity-[0.08] dark:opacity-[0.06]">
+          <StarBackground color="#0f172a" />
+        </div>
       </div>
-      <span className="relative z-10 inline-block bg-gradient-to-t from-black to-neutral-400 bg-clip-text text-transparent dark:from-white dark:to-neutral-500">
+      <span className="relative z-10 inline-block">
         {children}
       </span>
     </>
@@ -121,7 +102,6 @@ export function StarButton({
       <a
         href={href}
         style={sharedStyle}
-        ref={pathRef as React.RefObject<HTMLAnchorElement>}
         className={sharedClassName}
         {...props}
       >
@@ -134,7 +114,6 @@ export function StarButton({
     <button
       type={type}
       style={sharedStyle}
-      ref={pathRef as React.RefObject<HTMLButtonElement>}
       className={sharedClassName}
       {...props}
     >

@@ -99,7 +99,7 @@ export function HeroTitle({ children }: { children: React.ReactNode }) {
     <ShuffleText
       as="h1"
       text={String(children)}
-      className="max-w-4xl text-6xl font-bold tracking-tight text-black dark:text-white sm:text-7xl"
+      className="max-w-4xl text-6xl font-bold tracking-tight text-slate-950 dark:text-white sm:text-7xl"
     />
   );
 }

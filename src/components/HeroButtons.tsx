@@ -9,11 +9,15 @@ const quickLinks = [
 ];
 
 export default function HeroButtons() {
-  const lightColor = "#d7e4ff";
+  const lightColor = "#f2d6a2";
 
   return (
     <div className="flex flex-wrap gap-3">
-      <StarButton href="#about" lightColor={lightColor} className="rounded-3xl">
+      <StarButton
+        href="#about"
+        lightColor={lightColor}
+        className="rounded-3xl text-slate-900 dark:text-slate-50"
+      >
         About Me
       </StarButton>
       {quickLinks.map((link) => (
@@ -21,7 +25,7 @@ export default function HeroButtons() {
           key={link.href}
           href={link.href}
           lightColor={lightColor}
-          className="rounded-3xl text-muted-foreground"
+          className="rounded-3xl text-slate-700 dark:text-slate-100"
         >
           {link.label}
         </StarButton>

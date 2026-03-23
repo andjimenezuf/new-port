@@ -14,7 +14,6 @@ const projects = [
     timeline: "November 2025",
     technologies: "FastAPI, React, xAI API, Kotlin",
     github: "#",
-    link: "#",
   },
   {
     name: "Sherpa - HackHarvard",
@@ -23,7 +22,6 @@ const projects = [
     timeline: "October 2025",
     technologies: "JavaScript, FastAPI, HTML, CSS, Google APIs",
     github: "#",
-    link: "#",
   },
   {
     name: "EduAdvisor - Personal Project",
@@ -32,7 +30,6 @@ const projects = [
     timeline: "September 2025",
     technologies: "React, TypeScript, FastAPI, MongoDB, Google ADK",
     github: "#",
-    link: "#",
   },
   {
     name: "Currency Convertor",
@@ -41,7 +38,6 @@ const projects = [
     timeline: "Project",
     technologies: "Swift, iOS, ExchangeRateAPI, FlagsAPI",
     github: "#",
-    link: "#",
   },
   {
     name: "Ace Expense",
@@ -50,7 +46,6 @@ const projects = [
     timeline: "Project",
     technologies: "shadcn/ui, Drizzle ORM, PostgreSQL, Next.js",
     github: "#",
-    link: "#",
   },
   {
     name: "Investi Track",
@@ -59,7 +54,6 @@ const projects = [
     timeline: "Project",
     technologies: "Next.js, AlphaVantage, data visualization",
     github: "#",
-    link: "#",
   },
   {
     name: "Fruit Image Mold Detector",
@@ -68,7 +62,6 @@ const projects = [
     timeline: "Project",
     technologies: "TensorFlow, ImageNet, computer vision",
     github: "#",
-    link: "#",
   },
   {
     name: "Musicales Jimenez",
@@ -77,7 +70,6 @@ const projects = [
     timeline: "Project",
     technologies: "SQL, e-commerce, multi-page application",
     github: "#",
-    link: "#",
   },
 ];
 
@@ -103,9 +95,6 @@ export default function ProjectsSection() {
               <div className="flex gap-3 font-mono text-sm text-muted-foreground">
                 <a href={project.github} className="underline-offset-4 hover:underline">
                   GitHub
-                </a>
-                <a href={project.link} className="underline-offset-4 hover:underline">
-                  Live Link
                 </a>
               </div>
             </div>
