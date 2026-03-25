@@ -26,21 +26,21 @@ export default function Home() {
         <div className="pointer-events-none fixed inset-0">
           <div className="absolute inset-0 dark:hidden">
             <AnimatedGradient
-              color1="#fffaf4"
-              color2="#f4dbc0"
-              color3="#eef5ff"
-              color4="#dfeafb"
+              color1="#fffdf8"
+              color2="#f4e1c6"
+              color3="#edf4ff"
+              color4="#d8a95e"
             />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_14%,rgba(244,219,181,0.42),transparent_24%),radial-gradient(circle_at_82%_18%,rgba(170,202,255,0.28),transparent_26%),radial-gradient(circle_at_50%_120%,rgba(255,255,255,0.94),rgba(255,255,255,0)_46%),linear-gradient(180deg,rgba(255,253,249,0.96),rgba(243,248,255,0.84))]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_16%,rgba(244,219,181,0.24),transparent_24%),radial-gradient(circle_at_84%_18%,rgba(170,202,255,0.18),transparent_26%),radial-gradient(circle_at_62%_30%,rgba(216,169,94,0.12),transparent_24%),radial-gradient(circle_at_50%_105%,rgba(255,255,255,0.76),rgba(255,255,255,0)_44%),linear-gradient(180deg,rgba(255,252,247,0.68),rgba(242,247,255,0.46))]" />
           </div>
           <div className="absolute inset-0 hidden dark:block">
             <AnimatedGradient
-              color1="rgba(244,219,181,0.14)"
-              color2="rgba(124,166,255,0.18)"
-              color3="rgba(112,231,203,0.12)"
-              color4="rgba(255,255,255,0.02)"
+              color1="#08111e"
+              color2="#11243c"
+              color3="#1f4e63"
+              color4="#3f2e1d"
             />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(244,219,181,0.14),transparent_28%),radial-gradient(circle_at_78%_20%,rgba(124,166,255,0.18),transparent_26%),radial-gradient(circle_at_52%_82%,rgba(112,231,203,0.12),transparent_30%),linear-gradient(160deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(244,219,181,0.12),transparent_24%),radial-gradient(circle_at_80%_18%,rgba(124,166,255,0.16),transparent_24%),radial-gradient(circle_at_50%_82%,rgba(79,168,196,0.1),transparent_28%),linear-gradient(180deg,rgba(5,10,18,0.18),rgba(3,8,15,0.78))]" />
           </div>
         </div>
         <div className="absolute right-4 top-4 z-20 sm:right-6 sm:top-6">
