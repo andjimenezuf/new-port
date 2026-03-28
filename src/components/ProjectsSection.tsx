@@ -10,7 +10,7 @@ const projects = [
   {
     name: "FairFlow - HackPrinceton",
     description:
-      "Built a community micro-lending platform that explains credit risk with AI-generated clarity scores and public accountability for merchants.",
+      "Community micro-lending with AI credit scoring and merchant accountability.",
     timeline: "November 2025",
     technologies: "FastAPI, React, xAI API, Kotlin",
     github: "https://devpost.com/software/symbio-g2craj?_gl=1*ye370*_gcl_au*MTE2OTYxNjgyNi4xNzY5MzkyMDk1*_ga*NjE4MDgwOTg3LjE3NjkzOTIwOTU.*_ga_0YHJK3Y10M*czE3NzMzNjgzNjAkbzYkZzEkdDE3NzMzNjgzODckajMzJGwwJGgw",
@@ -18,7 +18,7 @@ const projects = [
   {
     name: "Sherpa - HackHarvard",
     description:
-      "Improved web accessibility for visually-impaired users by generating Gemini-based summaries of complex webpages and reducing DOM analysis latency.",
+      "Web accessibility navigation with AI page summaries for visually impaired users.",
     timeline: "October 2025",
     technologies: "JavaScript, FastAPI, HTML, CSS, Google APIs",
     github: "https://github.com/ahnopologetic/Sherpa-HackHarvard2025",
@@ -26,7 +26,7 @@ const projects = [
   {
     name: "EduAdvisor - Personal Project",
     description:
-      "Built an AI advisor that analyzes majors and prerequisite paths, then creates personalized recommendations using agent-driven tools.",
+      "Academic pathway planning with agentic recommendations and prerequisite mapping.",
     timeline: "September 2025",
     technologies: "React, TypeScript, FastAPI, MongoDB, Google ADK",
     github: "https://github.com/izy138/ShellHacks2025",
@@ -34,42 +34,37 @@ const projects = [
   {
     name: "Currency Convertor",
     description:
-      "Developed an iOS app in Swift for real-time currency conversions using ExchangeRateAPI and FlagsAPI.",
+      "Real-time currency conversion on iOS with live exchange rate data.",
     timeline: "Project",
     technologies: "Swift, iOS, ExchangeRateAPI, FlagsAPI",
-    github: "#",
   },
   {
     name: "Ace Expense",
     description:
-      "Streamlined personal finance management using shadcn/ui, Drizzle ORM, PostgreSQL, and Next.js.",
+      "Personal expense tracking with modern full-stack finance workflows.",
     timeline: "Project",
     technologies: "shadcn/ui, Drizzle ORM, PostgreSQL, Next.js",
-    github: "#",
   },
   {
     name: "Investi Track",
     description:
-      "Implemented a stock search and visualization interface using Next.js and AlphaVantage with room for predictive ML additions.",
+      "Stock discovery and market visualization with real-time financial data.",
     timeline: "Project",
     technologies: "Next.js, AlphaVantage, data visualization",
-    github: "#",
   },
   {
     name: "Fruit Image Mold Detector",
     description:
-      "Leveraged TensorFlow and a pre-trained ImageNet model to identify mold on fruits with 97% validation accuracy.",
+      "Fruit mold detection with computer vision and image classification.",
     timeline: "Project",
     technologies: "TensorFlow, ImageNet, computer vision",
-    github: "#",
   },
   {
     name: "Musicales Jimenez",
     description:
-      "An interactive multi-page music store simulation with live cart calculations and SQL-backed inventory management.",
+      "Music store simulation with cart logic and SQL inventory management.",
     timeline: "Project",
     technologies: "SQL, e-commerce, multi-page application",
-    github: "#",
   },
 ];
 

@@ -13,7 +13,7 @@ export default function HeroSection() {
         <div className="relative flex min-h-[36svh] items-center py-2 lg:py-4">
           <div className="max-w-4xl space-y-6">
             <p className="font-mono text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-slate-600 dark:text-white/60">
-              AI
+              
             </p>
             <HeroTitle>Andrew Jimenez</HeroTitle>
             <p className="max-w-2xl text-base leading-7 text-slate-700 dark:text-white/72">
