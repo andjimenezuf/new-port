@@ -5,12 +5,14 @@ type SectionShellProps = {
   id: string;
   children: React.ReactNode;
   className?: string;
+  sectionNumber?: string;
 };
 
 export function SectionShell({
   id,
   children,
   className,
+  sectionNumber,
 }: SectionShellProps) {
   return (
     <section
@@ -21,6 +23,13 @@ export function SectionShell({
       )}
     >
       <div className="max-h-[calc(100svh-8rem)] w-full overflow-y-auto pr-1">
+        {sectionNumber ? (
+          <div className="mb-5 sm:mb-6">
+            <span className="panel-surface-soft inline-flex min-w-14 items-center justify-center rounded-full px-3 py-1.5 font-mono text-xs font-semibold tracking-[0.28em] text-[color:var(--panel-muted)]">
+              {sectionNumber}
+            </span>
+          </div>
+        ) : null}
         {children}
       </div>
     </section>

@@ -33,7 +33,11 @@ const involvement = [
 
 export default function LeadershipSection() {
   return (
-    <SectionShell id="leadership" className="space-y-5">
+    <SectionShell
+      id="leadership"
+      className="space-y-5"
+      sectionNumber="04"
+    >
       <SectionHeading
         title="Leadership & Professional Development"
         subtitle="Leadership, mentorship, and student involvement across technical communities."

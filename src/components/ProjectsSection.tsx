@@ -70,7 +70,11 @@ const projects = [
 
 export default function ProjectsSection() {
   return (
-    <SectionShell id="projects" className="space-y-5">
+    <SectionShell
+      id="projects"
+      className="space-y-5"
+      sectionNumber="06"
+    >
       <SectionHeading
         title="Projects"
         subtitle="A mix of hackathon work, personal products, and experiments across AI, mobile, and full-stack development."
@@ -87,11 +91,13 @@ export default function ProjectsSection() {
                 />
                 <Eyebrow>{project.timeline}</Eyebrow>
               </div>
-              <div className="flex gap-3 font-mono text-sm text-muted-foreground">
-                <a href={project.github} className="underline-offset-4 hover:underline">
-                  GitHub
-                </a>
-              </div>
+              {project.github ? (
+                <div className="flex gap-3 font-mono text-sm text-muted-foreground">
+                  <a href={project.github} className="underline-offset-4 hover:underline">
+                    GitHub
+                  </a>
+                </div>
+              ) : null}
             </div>
             <div className="space-y-4">
               <p className="text-base leading-7 text-muted-foreground">

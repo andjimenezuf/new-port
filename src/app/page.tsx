@@ -1,5 +1,6 @@
 import AboutSection from "@/components/AboutSection";
 import AwardsSection from "@/components/AwardsSection";
+import ContactSection from "@/components/ContactSection";
 import EducationSection from "@/components/EducationSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import HeroSection from "@/components/HeroSection";
@@ -18,6 +19,7 @@ export default function Home() {
     "leadership",
     "awards",
     "projects",
+    "contact",
   ];
 
   return (
@@ -55,6 +57,7 @@ export default function Home() {
             <LeadershipSection />
             <AwardsSection />
             <ProjectsSection />
+            <ContactSection />
           </SectionDeck>
         </div>
       </div>

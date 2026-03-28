@@ -3,9 +3,12 @@
 import { StarButton } from "@/components/ui/star-button";
 
 const quickLinks = [
+  { label: "Education", href: "#education" },
   { label: "Experience", href: "#experience" },
+  { label: "Leadership", href: "#leadership" },
   { label: "Projects", href: "#projects" },
   { label: "Awards", href: "#awards" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function HeroButtons() {

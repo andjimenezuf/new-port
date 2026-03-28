@@ -33,7 +33,11 @@ export default function AwardsSection() {
   const gridClass = awards.length > 3 ? "md:grid-cols-2" : "";
 
   return (
-    <SectionShell id="awards" className="space-y-6">
+    <SectionShell
+      id="awards"
+      className="space-y-6"
+      sectionNumber="05"
+    >
       <SectionHeading
         title="Awards & Scholarships"
         subtitle=" "

@@ -31,7 +31,11 @@ const experiences = [
 
 export default function ExperienceSection() {
   return (
-    <SectionShell id="experience" className="space-y-6">
+    <SectionShell
+      id="experience"
+      className="space-y-6"
+      sectionNumber="03"
+    >
       <SectionHeading
         title="Experience"
         subtitle="Research and internships focused on AI systems, product engineering."

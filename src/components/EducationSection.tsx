@@ -30,7 +30,11 @@ const education = {
 
 export default function EducationSection() {
   return (
-    <SectionShell id="education" className="space-y-6">
+    <SectionShell
+      id="education"
+      className="space-y-6"
+      sectionNumber="02"
+    >
       <SectionHeading
         title="Education"
         subtitle=" "

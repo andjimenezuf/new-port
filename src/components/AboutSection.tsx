@@ -69,7 +69,11 @@ const certifications = ["AWS Cloud Practitioner"];
 
 export default function AboutSection() {
   return (
-    <SectionShell id="about" className="space-y-6">
+    <SectionShell
+      id="about"
+      className="space-y-6"
+      sectionNumber="01"
+    >
       <SectionHeading
         title="About Me"
         subtitle=" "
