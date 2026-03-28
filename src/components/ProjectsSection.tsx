@@ -13,7 +13,7 @@ const projects = [
       "Built a community micro-lending platform that explains credit risk with AI-generated clarity scores and public accountability for merchants.",
     timeline: "November 2025",
     technologies: "FastAPI, React, xAI API, Kotlin",
-    github: "#",
+    github: "https://devpost.com/software/symbio-g2craj?_gl=1*ye370*_gcl_au*MTE2OTYxNjgyNi4xNzY5MzkyMDk1*_ga*NjE4MDgwOTg3LjE3NjkzOTIwOTU.*_ga_0YHJK3Y10M*czE3NzMzNjgzNjAkbzYkZzEkdDE3NzMzNjgzODckajMzJGwwJGgw",
   },
   {
     name: "Sherpa - HackHarvard",
@@ -21,7 +21,7 @@ const projects = [
       "Improved web accessibility for visually-impaired users by generating Gemini-based summaries of complex webpages and reducing DOM analysis latency.",
     timeline: "October 2025",
     technologies: "JavaScript, FastAPI, HTML, CSS, Google APIs",
-    github: "#",
+    github: "https://github.com/ahnopologetic/Sherpa-HackHarvard2025",
   },
   {
     name: "EduAdvisor - Personal Project",
@@ -29,7 +29,7 @@ const projects = [
       "Built an AI advisor that analyzes majors and prerequisite paths, then creates personalized recommendations using agent-driven tools.",
     timeline: "September 2025",
     technologies: "React, TypeScript, FastAPI, MongoDB, Google ADK",
-    github: "#",
+    github: "https://github.com/izy138/ShellHacks2025",
   },
   {
     name: "Currency Convertor",
