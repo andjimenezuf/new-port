@@ -1,4 +1,4 @@
-import { Github, Mail } from "lucide-react";
+import { FileText, Github, Mail } from "lucide-react";
 
 import {
   SectionHeading,
@@ -17,6 +17,11 @@ const contactLinks = [
     label: "GitHub",
     href: "https://github.com/andjimenezuf",
     icon: Github,
+  },
+  {
+    label: "Resume",
+    href: "https://docs.google.com/document/d/1MFxeRjtxR4kGMUvCdngKPKIOKYopW0g4BTrc4mVFuYU/edit?usp=sharing",
+    icon: FileText,
   },
 ] as const;
 
@@ -41,8 +46,8 @@ export default function ContactSection() {
                   href={link.href}
                   lightColor="#f2d6a2"
                   className="h-12 min-w-40 rounded-full px-6 text-slate-900 dark:text-slate-50"
-                  target={link.label === "GitHub" ? "_blank" : undefined}
-                  rel={link.label === "GitHub" ? "noreferrer" : undefined}
+                  target={link.label !== "Email" ? "_blank" : undefined}
+                  rel={link.label !== "Email" ? "noreferrer" : undefined}
                 >
                   <span className="inline-flex items-center gap-2">
                     <Icon className="h-4 w-4" />

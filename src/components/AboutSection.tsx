@@ -78,15 +78,15 @@ export default function AboutSection() {
         title="About Me"
         subtitle=" "
       />
-      <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-        <SurfaceCard className="space-y-6">
+      <div className="grid gap-4 sm:gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+        <SurfaceCard className="space-y-4 sm:space-y-6">
           <div className="grid gap-4">
             {aboutGroups.map((group) => (
               <div
                 key={group.title}
-                className="rounded-3xl border border-border/60 bg-background/30 p-5 backdrop-blur-sm"
+                className="rounded-[1.2rem] border border-border/60 bg-background/30 p-4 backdrop-blur-sm sm:rounded-3xl sm:p-5"
               >
-                <h3 className="text-xl font-semibold tracking-tight">
+                <h3 className="text-lg font-semibold tracking-tight sm:text-xl">
                   {group.title}
                 </h3>
                 {group.type === "paragraph" ? (
@@ -107,15 +107,15 @@ export default function AboutSection() {
             ))}
           </div>
         </SurfaceCard>
-        <SurfaceCard className="space-y-5">
+        <SurfaceCard className="space-y-4 sm:space-y-5">
           <Eyebrow>Technical Skills</Eyebrow>
           <div className="grid gap-4">
             {Object.entries(skills).map(([group, items]) => (
               <div
                 key={group}
-                className="rounded-3xl border border-border/60 bg-background/30 p-5 backdrop-blur-sm"
+                className="rounded-[1.2rem] border border-border/60 bg-background/30 p-4 backdrop-blur-sm sm:rounded-3xl sm:p-5"
               >
-                <h3 className="text-lg font-semibold tracking-tight">{group}</h3>
+                <h3 className="text-base font-semibold tracking-tight sm:text-lg">{group}</h3>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {items.map((item) => (
                     <Tag key={item}>{item}</Tag>
@@ -123,8 +123,8 @@ export default function AboutSection() {
                 </div>
               </div>
             ))}
-            <div className="rounded-3xl border border-border/60 bg-background/30 p-5 backdrop-blur-sm">
-              <h3 className="text-lg font-semibold tracking-tight">Certifications</h3>
+            <div className="rounded-[1.2rem] border border-border/60 bg-background/30 p-4 backdrop-blur-sm sm:rounded-3xl sm:p-5">
+              <h3 className="text-base font-semibold tracking-tight sm:text-lg">Certifications</h3>
               <div className="mt-4 flex flex-wrap gap-2">
                 {certifications.map((item) => (
                   <Tag key={item}>{item}</Tag>

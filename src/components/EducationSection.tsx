@@ -39,11 +39,11 @@ export default function EducationSection() {
         title="Education"
         subtitle=" "
       />
-      <SurfaceCard className="space-y-6">
+      <SurfaceCard className="space-y-4 sm:space-y-6">
         <div className="space-y-4">
           <Eyebrow>{education.school}</Eyebrow>
           <div>
-            <h3 className="text-2xl font-semibold tracking-tight">
+            <h3 className="text-xl font-semibold tracking-tight sm:text-2xl">
               {education.degree}
             </h3>
             <p className="mt-2 text-sm text-muted-foreground">

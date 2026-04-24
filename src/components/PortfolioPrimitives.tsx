@@ -18,14 +18,14 @@ export function SectionShell({
     <section
       id={id}
       className={cn(
-        "flex min-h-[100svh] snap-start snap-always scroll-mt-0 items-center py-8 sm:py-10",
+        "flex min-h-[100svh] snap-start snap-always scroll-mt-0 items-center py-5 sm:py-10",
         className
       )}
     >
-      <div className="max-h-[calc(100svh-8rem)] w-full overflow-y-auto pr-1">
+      <div className="max-h-[calc(100svh-6.5rem)] w-full overflow-y-auto pr-1 sm:max-h-[calc(100svh-8rem)]">
         {sectionNumber ? (
-          <div className="mb-5 sm:mb-6">
-            <span className="panel-surface-soft inline-flex min-w-14 items-center justify-center rounded-full px-3 py-1.5 font-mono text-xs font-semibold tracking-[0.28em] text-[color:var(--panel-muted)]">
+          <div className="mb-4 sm:mb-6">
+            <span className="panel-surface-soft inline-flex min-w-12 items-center justify-center rounded-full px-2.5 py-1 font-mono text-[0.65rem] font-semibold tracking-[0.24em] text-[color:var(--panel-muted)] sm:min-w-14 sm:px-3 sm:py-1.5 sm:text-xs sm:tracking-[0.28em]">
               {sectionNumber}
             </span>
           </div>
@@ -58,10 +58,10 @@ export function SectionHeading({
       <ShuffleText
         as="h2"
         text={title}
-        className="text-4xl font-bold tracking-tight text-black sm:text-5xl dark:text-white"
+        className="text-3xl font-bold tracking-tight text-black sm:text-5xl dark:text-white"
       />
       {subtitle ? (
-        <p className="max-w-3xl text-base leading-8 text-black/72 dark:text-white/72">
+        <p className="max-w-3xl text-sm leading-6 text-black/72 sm:text-base sm:leading-8 dark:text-white/72">
           {subtitle}
         </p>
       ) : null}
@@ -78,7 +78,7 @@ export function SurfaceCard({ children, className }: SurfaceCardProps) {
   return (
     <div
       className={cn(
-        "panel-surface rounded-[1.75rem] p-7 [&_.text-muted-foreground]:text-[var(--panel-muted)] sm:p-8",
+        "panel-surface rounded-[1.35rem] p-4 [&_.text-muted-foreground]:text-[var(--panel-muted)] sm:rounded-[1.75rem] sm:p-8",
         className
       )}
     >
@@ -97,7 +97,7 @@ export function Eyebrow({ children }: { children: React.ReactNode }) {
 
 export function Tag({ children }: { children: React.ReactNode }) {
   return (
-    <span className="panel-surface-soft inline-flex rounded-full px-3 py-1 font-mono text-sm text-[color:var(--panel-muted)]">
+    <span className="panel-surface-soft inline-flex rounded-full px-2.5 py-1 font-mono text-xs text-[color:var(--panel-muted)] sm:px-3 sm:text-sm">
       {children}
     </span>
   );
@@ -108,7 +108,7 @@ export function HeroTitle({ children }: { children: React.ReactNode }) {
     <ShuffleText
       as="h1"
       text={String(children)}
-      className="max-w-4xl text-6xl font-bold tracking-tight text-slate-950 dark:text-white sm:text-7xl"
+      className="max-w-4xl text-4xl font-bold tracking-tight text-slate-950 sm:text-7xl dark:text-white"
     />
   );
 }

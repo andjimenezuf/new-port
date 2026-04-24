@@ -135,7 +135,7 @@ This file captures the user-visible text from the page components and buttons, e
 - Advantech
 - Tokyo, Japan
 - February 2025 - May 2025
-- Built a real-time computer vision system using NVIDIA tooling and architected a multilingual AI assistant pipeline later showcased at Japan IT Week.
+- Shipped GenAI Studio, an LLM fine-tuning product in Advantech's Edge AI SDK, and showcased it at Japan IT Week.
 
 ## Leadership Section
 

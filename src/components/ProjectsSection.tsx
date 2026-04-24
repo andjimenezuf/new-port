@@ -72,38 +72,40 @@ export default function ProjectsSection() {
   return (
     <SectionShell
       id="projects"
-      className="space-y-5"
+      className="space-y-5 px-1 pb-6 sm:px-0 sm:pb-0"
       sectionNumber="06"
     >
       <SectionHeading
         title="Projects"
         subtitle="A mix of hackathon work, personal products, and experiments across AI, mobile, and full-stack development."
       />
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid gap-5 px-1 pb-14 sm:gap-4 sm:px-0 sm:pb-6 md:grid-cols-2">
         {projects.map((project) => (
-          <SurfaceCard key={project.name} className="space-y-5 p-6 sm:p-7">
-            <div className="flex flex-col gap-3 lg:flex-row lg:items-start lg:justify-between">
+          <SurfaceCard key={project.name} className="space-y-4 p-5 sm:space-y-5 sm:p-7">
+            <div className="flex flex-col gap-3 text-center sm:text-left lg:flex-row lg:items-start lg:justify-between">
               <div className="space-y-2">
                 <ShuffleText
                   as="h3"
                   text={project.name}
-                  className="text-2xl font-semibold tracking-tight"
+                  className="text-xl font-semibold tracking-tight sm:text-2xl"
                 />
-                <Eyebrow>{project.timeline}</Eyebrow>
+                <div className="flex justify-center sm:justify-start">
+                  <Eyebrow>{project.timeline}</Eyebrow>
+                </div>
               </div>
               {project.github ? (
-                <div className="flex gap-3 font-mono text-sm text-muted-foreground">
+                <div className="flex justify-center gap-3 font-mono text-sm text-muted-foreground sm:justify-start">
                   <a href={project.github} className="underline-offset-4 hover:underline">
                     GitHub
                   </a>
                 </div>
               ) : null}
             </div>
-            <div className="space-y-4">
-              <p className="text-base leading-7 text-muted-foreground">
+            <div className="space-y-3 sm:space-y-4">
+              <p className="text-sm leading-6 text-muted-foreground sm:text-base sm:leading-7">
                 {project.description}
               </p>
-              <p className="text-sm leading-6 text-muted-foreground">
+              <p className="hidden text-sm leading-6 text-muted-foreground md:block">
                 <span className="font-mono font-medium text-[color:var(--panel-text)]">
                   Technologies:
                 </span>{" "}
