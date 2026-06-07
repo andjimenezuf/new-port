@@ -5,9 +5,9 @@ import EducationSection from "@/components/EducationSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import HeroSection from "@/components/HeroSection";
 import LeadershipSection from "@/components/LeadershipSection";
+import Navbar from "@/components/Navbar";
 import ProjectsSection from "@/components/ProjectsSection";
 import SectionDeck from "@/components/SectionDeck";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { AnimatedGradient } from "@/components/ui/stripe-animated-gradient";
 
 export default function Home() {
@@ -45,9 +45,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(244,219,181,0.12),transparent_24%),radial-gradient(circle_at_80%_18%,rgba(124,166,255,0.16),transparent_24%),radial-gradient(circle_at_50%_82%,rgba(79,168,196,0.1),transparent_28%),linear-gradient(180deg,rgba(5,10,18,0.18),rgba(3,8,15,0.78))]" />
           </div>
         </div>
-        <div className="absolute right-4 top-4 z-20 sm:right-6 sm:top-6">
-          <ThemeToggle />
-        </div>
+        <Navbar />
         <div className="relative z-10 min-h-screen w-full">
           <SectionDeck sectionIds={sectionIds}>
             <HeroSection />
