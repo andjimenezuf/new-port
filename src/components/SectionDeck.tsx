@@ -17,7 +17,6 @@ export default function SectionDeck({
 }: SectionDeckProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const navSectionIds = sectionIds.slice(1);
 
   useEffect(() => {
     function isEditableTarget(target: EventTarget | null) {
@@ -107,40 +106,13 @@ export default function SectionDeck({
   return (
     <div
       ref={containerRef}
+      data-section-deck
       className={cn(
-        "relative h-[100svh] w-full snap-y snap-mandatory overflow-y-auto scroll-smooth",
+        "relative h-svh w-full snap-y snap-mandatory overflow-y-auto scroll-smooth",
         className
       )}
     >
-      <div className="pointer-events-none fixed right-6 top-1/2 z-30 hidden -translate-y-1/2 xl:flex">
-        <div className="pointer-events-auto flex flex-col gap-3">
-          {navSectionIds.map((id, index) => {
-            const sectionIndex = index + 1;
-            const isActive = activeIndex === sectionIndex;
-
-            return (
-              <button
-                key={id}
-                type="button"
-                onClick={() => {
-                  document.getElementById(id)?.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                  });
-                }}
-                className={cn(
-                  "text-right font-mono text-xs font-semibold tracking-[0.24em] text-foreground/35 transition hover:text-foreground/78",
-                  isActive && "text-foreground"
-                )}
-                aria-label={`Jump to section ${index + 1}`}
-              >
-                {String(index + 1).padStart(2, "0")}
-              </button>
-            );
-          })}
-        </div>
-      </div>
-      <div className="mx-auto flex w-full max-w-6xl flex-col px-4 pb-10 pt-24 sm:px-6 lg:px-8">
+      <div className="mx-auto flex w-full max-w-6xl flex-col px-4 pb-10 pt-20 sm:px-6 lg:px-8">
         {children}
       </div>
     </div>
