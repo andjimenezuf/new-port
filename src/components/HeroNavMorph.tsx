@@ -127,6 +127,8 @@ export default function HeroNavMorph() {
           style={{ height, borderRadius, overflow: "hidden" }}
           className="relative border border-slate-900/10 bg-white/90 backdrop-blur-md dark:border-white/10 dark:bg-slate-950/90"
         >
+          {/* Spotlight accents — same two-spotlight style used in other section cards */}
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_18%,rgba(244,219,181,0.3),transparent_28%),radial-gradient(circle_at_84%_22%,rgba(170,202,255,0.18),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.14),rgba(255,255,255,0.02))] dark:bg-[radial-gradient(circle_at_15%_18%,rgba(244,219,181,0.08),transparent_28%),radial-gradient(circle_at_84%_22%,rgba(124,166,255,0.14),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))]" />
 
           {/* ── Hero layout (fades out) ── */}
           <motion.div
@@ -137,7 +139,7 @@ export default function HeroNavMorph() {
               Hi, my name is
             </p>
 
-            <h1 className="mt-1 text-3xl font-bold tracking-tight text-slate-950 sm:text-5xl dark:text-white">
+            <h1 className="mt-1 text-3xl font-bold tracking-tight text-slate-950 sm:text-6xl dark:text-white">
               Andrew Jimenez.
             </h1>
 
