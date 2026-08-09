@@ -138,7 +138,7 @@ export default function HeroNavMorph() {
           {/* ── Hero layout (fades out) ── */}
           <motion.div
             style={{ opacity: heroOpacity }}
-            className="absolute inset-0 flex flex-col justify-center px-6 py-5 sm:px-10 sm:py-7"
+            className="absolute inset-0 flex flex-col justify-center px-6 py-5 sm:px-10 sm:py-7 lg:px-12 lg:py-8"
           >
             <div className="grid grid-cols-[minmax(0,1fr)_88px] items-center gap-4 sm:grid-cols-[minmax(0,1fr)_132px] sm:gap-8 lg:grid-cols-[2fr_1fr] lg:gap-x-10 lg:gap-y-4">
               <div className="min-w-0">
@@ -160,7 +160,7 @@ export default function HeroNavMorph() {
                   scale: heroImageScale,
                   y: heroImageY,
                 }}
-                className="relative aspect-[4/5] w-[88px] justify-self-end overflow-hidden rounded-2xl opacity-90 shadow-lg ring-1 ring-black/10 sm:w-[132px] lg:row-span-2 lg:my-auto lg:aspect-auto lg:h-[240px] lg:w-[190px] lg:justify-self-center dark:ring-white/15"
+                className="relative aspect-[4/5] w-[88px] justify-self-end overflow-hidden rounded-2xl opacity-90 shadow-lg ring-1 ring-black/10 sm:w-[132px] lg:row-span-2 lg:my-auto lg:aspect-auto lg:h-[280px] lg:w-[224px] lg:justify-self-end dark:ring-white/15"
               >
                 <Image
                   src={HERO_IMAGE_URL}
