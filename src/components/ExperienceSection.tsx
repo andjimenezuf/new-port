@@ -7,16 +7,18 @@ import { ShuffleText } from "@/components/ui/shuffle-text";
 
 const experiences = [
   {
-    title: "Undergraduate Researcher (Robotics & Multimodal ML)",
-    company: "University of Florida",
-    duration: "Jan 2026 - Present",
+    title: "Software Engineer Intern",
+    company: "FIFA",
+    duration: "Jun 2026 - Jul 2026",
+    location: "Miami, FL",
     description:
-      "Building an interpretability pipeline using Pytorch and Integrated Gradients to explain decision-making in Vision-Language-Action models.",
+      "Built data infrastructure to process live player- and football-tracking data for World Cup post-match analytics at Miami Stadium.",
   },
   {
     title: "Software Engineer Intern",
-    company: "JPMorgan Chase & Co.",
+    company: "JPMorgan Chase",
     duration: "June 2025 - August 2025",
+    location: "New York, NY",
     description:
       "Integrated AI agents into JPMC's investment platform to streamline risk analysis, cutting review time by roughly 40%.",
   },
@@ -24,6 +26,7 @@ const experiences = [
     title: "AI Software Engineer Intern",
     company: "Advantech",
     duration: "February 2025 - May 2025",
+    location: "Tokyo, Japan",
     description:
       "Shipped GenAI Studio, an LLM fine-tuning product in Advantech's Edge AI SDK, and showcased it at Japan IT Week.",
   },
@@ -38,7 +41,7 @@ export default function ExperienceSection() {
     >
       <SectionHeading
         title="Experience"
-        subtitle="Research and internships focused on AI systems, product engineering."
+        subtitle="Internships focused on AI systems and product engineering."
       />
       <div className="grid gap-4">
         {experiences.map((experience) => (
@@ -55,9 +58,14 @@ export default function ExperienceSection() {
                 />
                 <p className="font-mono text-base sm:text-lg">{experience.company}</p>
               </div>
-              <p className="font-mono text-sm uppercase tracking-[0.18em] text-muted-foreground lg:text-right">
-                {experience.duration}
-              </p>
+              <div className="space-y-1 lg:text-right">
+                <p className="font-mono text-sm uppercase tracking-[0.18em] text-muted-foreground">
+                  {experience.duration}
+                </p>
+                <p className="font-mono text-xs uppercase tracking-[0.14em] text-muted-foreground/75">
+                  {experience.location}
+                </p>
+              </div>
             </div>
             <p className="text-sm leading-6 text-muted-foreground sm:text-base sm:leading-7">
               {experience.description}

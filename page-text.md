@@ -41,7 +41,7 @@ This file captures the user-visible text from the page components and buttons, e
 
 - About Me
 - A first-generation University of Florida student aiming at technical work that blends rigorous engineering with fast iteration.
-- What I'm Studying
+- Education
 - B.S. in Computer Science at the University of Florida
 - Minor in Statistics
 - Focused on building a strong base in systems, data, and applied machine learning

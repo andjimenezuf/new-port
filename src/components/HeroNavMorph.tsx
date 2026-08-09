@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { cn } from "@/lib/utils";
@@ -18,6 +19,7 @@ const NAV_SECTIONS = [
 
 const CARD_HEIGHT = 370;
 const NAV_HEIGHT = 64;
+const HERO_IMAGE_URL = "/CLRSTK_2026.png";
 
 export default function HeroNavMorph() {
   const scrollProgress = useMotionValue(0);
@@ -106,6 +108,8 @@ export default function HeroNavMorph() {
   // Content cross-fade
   const heroOpacity = useTransform(scrollProgress, [0, 0.48], [1, 0]);
   const navOpacity = useTransform(scrollProgress, [0.52, 1], [0, 1]);
+  const heroImageScale = useTransform(scrollProgress, [0, 0.58], [1, 0.88]);
+  const heroImageY = useTransform(scrollProgress, [0, 0.58], [0, -10]);
   const navPointerEvents = useTransform(navOpacity, (v) =>
     v > 0.5 ? "auto" : "none"
   );
@@ -135,23 +139,40 @@ export default function HeroNavMorph() {
             style={{ opacity: heroOpacity }}
             className="absolute inset-0 flex flex-col justify-center px-7 py-6 sm:px-9"
           >
+            <motion.div
+              style={{
+                scale: heroImageScale,
+                y: heroImageY,
+              }}
+              className="pointer-events-none absolute right-5 top-1/2 hidden aspect-[996/1116] w-[280px] -translate-y-1/2 overflow-hidden rounded-2xl opacity-90 shadow-lg ring-1 ring-black/10 sm:block dark:ring-white/10"
+            >
+              <Image
+                src={HERO_IMAGE_URL}
+                alt=""
+                aria-hidden="true"
+                fill
+                sizes="(min-width: 640px) 36vw, 0px"
+                className="h-full w-full object-cover"
+              />
+            </motion.div>
+
             <p className="font-mono text-[0.6rem] font-medium uppercase tracking-[0.22em] text-slate-400 dark:text-white/40">
               Hi, my name is
             </p>
 
-            <h1 className="mt-1 text-3xl font-bold tracking-tight text-slate-950 sm:text-6xl dark:text-white">
+            <h1 className="relative z-[1] mt-1 max-w-[62%] text-3xl font-bold tracking-tight text-slate-950 sm:text-6xl dark:text-white">
               Andrew Jimenez.
             </h1>
 
-            <p className="mt-1 text-base font-semibold text-slate-500 sm:text-xl dark:text-white/60">
+            <p className="relative z-[1] mt-1 max-w-[62%] text-base font-semibold text-slate-500 sm:text-xl dark:text-white/60">
               I build software.
             </p>
 
-            <p className="mt-3 max-w-xl text-xs leading-5 text-slate-600 sm:text-sm sm:leading-6 dark:text-white/70">
+            <p className="relative z-[1] mt-3 max-w-[62%] text-xs leading-5 text-slate-600 sm:text-sm sm:leading-6 dark:text-white/70">
               I&apos;m a software engineer specializing in AI/ML. I&apos;m currently a student at the University of Florida, learning to create and contribute to the technological world for a better future.
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 pointer-events-auto sm:mt-7">
+            <div className="relative z-[1] mt-6 flex max-w-[62%] flex-wrap gap-x-5 gap-y-2 pointer-events-auto sm:mt-7">
               {NAV_SECTIONS.map(({ id, label }) => (
                 <button
                   key={id}
