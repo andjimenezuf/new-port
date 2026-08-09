@@ -30,10 +30,10 @@ export default function Home() {
           <div className="absolute inset-0 dark:hidden">
             {/* Animated base: warm whites, sandy gold, and a soft blue */}
             <AnimatedGradient
-              color1="#cee7f5" /* near-white warm base */
-              color2="#74aadb" /* sandy/peach */
-              color3="#c8acf1" /* soft blue-white */
-              color4="#fae0f3" /* golden amber */
+              color1="#68d3e3" /* light purple */
+              color2="#e37868" /* hot orange */
+              color3="#fdd8cb" /* soft blue-white */
+              color4="#e7f2fb" /* golden amber */ 
             />
             {/* Static radial accents layered on top of the animation:
                 - top-left:  warm sandy spot

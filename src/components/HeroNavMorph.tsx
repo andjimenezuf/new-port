@@ -19,6 +19,7 @@ const NAV_SECTIONS = [
 
 const CARD_HEIGHT = 370;
 const NAV_HEIGHT = 64;
+const HERO_SIDE_GAP = 24;
 const HERO_IMAGE_URL = "/CLRSTK_2026.png";
 
 export default function HeroNavMorph() {
@@ -43,8 +44,8 @@ export default function HeroNavMorph() {
       const inner = document.querySelector("[data-section-deck] > div") as HTMLElement | null;
       if (inner) {
         const rect = inner.getBoundingClientRect();
-        heroLeftPx = Math.max(0, rect.left);
-        heroRightPx = Math.max(0, window.innerWidth - rect.right);
+        heroLeftPx = Math.max(0, rect.left + HERO_SIDE_GAP);
+        heroRightPx = Math.max(0, window.innerWidth - rect.right + HERO_SIDE_GAP);
       }
       applyValues(scrollProgress.get());
       setMeasured(true);
@@ -137,51 +138,55 @@ export default function HeroNavMorph() {
           {/* ── Hero layout (fades out) ── */}
           <motion.div
             style={{ opacity: heroOpacity }}
-            className="absolute inset-0 flex flex-col justify-center px-7 py-6 sm:px-9"
+            className="absolute inset-0 flex flex-col justify-center px-6 py-5 sm:px-10 sm:py-7"
           >
-            <motion.div
-              style={{
-                scale: heroImageScale,
-                y: heroImageY,
-              }}
-              className="pointer-events-none absolute right-5 top-1/2 hidden aspect-[996/1116] w-[280px] -translate-y-1/2 overflow-hidden rounded-2xl opacity-90 shadow-lg ring-1 ring-black/10 sm:block dark:ring-white/10"
-            >
-              <Image
-                src={HERO_IMAGE_URL}
-                alt=""
-                aria-hidden="true"
-                fill
-                sizes="(min-width: 640px) 36vw, 0px"
-                className="h-full w-full object-cover"
-              />
-            </motion.div>
+            <div className="grid grid-cols-[minmax(0,1fr)_88px] items-center gap-4 sm:grid-cols-[minmax(0,1fr)_132px] sm:gap-8 lg:grid-cols-[2fr_1fr] lg:gap-x-10 lg:gap-y-4">
+              <div className="min-w-0">
+                <p className="font-mono text-[0.6rem] font-medium uppercase tracking-[0.22em] text-slate-400 dark:text-white/40">
+                  Hi, my name is
+                </p>
 
-            <p className="font-mono text-[0.6rem] font-medium uppercase tracking-[0.22em] text-slate-400 dark:text-white/40">
-              Hi, my name is
-            </p>
+                <h1 className="mt-1 text-3xl font-bold tracking-tight text-slate-950 sm:text-6xl dark:text-white">
+                  Andrew Jimenez.
+                </h1>
 
-            <h1 className="relative z-[1] mt-1 max-w-[62%] text-3xl font-bold tracking-tight text-slate-950 sm:text-6xl dark:text-white">
-              Andrew Jimenez.
-            </h1>
+                <p className="mt-1 text-base font-semibold text-slate-500 sm:text-xl dark:text-white/60">
+                  I build software.
+                </p>
+              </div>
 
-            <p className="relative z-[1] mt-1 max-w-[62%] text-base font-semibold text-slate-500 sm:text-xl dark:text-white/60">
-              I build software.
-            </p>
+              <motion.div
+                style={{
+                  scale: heroImageScale,
+                  y: heroImageY,
+                }}
+                className="relative aspect-[4/5] w-[88px] justify-self-end overflow-hidden rounded-2xl opacity-90 shadow-lg ring-1 ring-black/10 sm:w-[132px] lg:row-span-2 lg:my-auto lg:aspect-auto lg:h-[240px] lg:w-[190px] lg:justify-self-center dark:ring-white/15"
+              >
+                <Image
+                  src={HERO_IMAGE_URL}
+                  alt="Andrew Jimenez"
+                  fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 132px, 88px"
+                  className="h-full w-full object-cover"
+                />
+              </motion.div>
+              <div className="col-span-2 min-w-0 lg:col-span-1 lg:col-start-1 lg:row-start-2">
+                <p className="max-w-2xl text-xs leading-5 text-slate-600 sm:text-sm sm:leading-6 dark:text-white/70">
+                  I&apos;m a software engineer specializing in AI/ML. I&apos;m currently a student at the University of Florida, learning to create and contribute to the technological world for a better future.
+                </p>
 
-            <p className="relative z-[1] mt-3 max-w-[62%] text-xs leading-5 text-slate-600 sm:text-sm sm:leading-6 dark:text-white/70">
-              I&apos;m a software engineer specializing in AI/ML. I&apos;m currently a student at the University of Florida, learning to create and contribute to the technological world for a better future.
-            </p>
-
-            <div className="relative z-[1] mt-6 flex max-w-[62%] flex-wrap gap-x-5 gap-y-2 pointer-events-auto sm:mt-7">
-              {NAV_SECTIONS.map(({ id, label }) => (
-                <button
-                  key={id}
-                  onClick={() => scrollToSection(id)}
-                  className="font-mono text-xs font-medium tracking-wide text-slate-500 transition hover:text-slate-800 dark:text-white/50 dark:hover:text-white/80"
-                >
-                  {label}
-                </button>
-              ))}
+                <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 pointer-events-auto sm:mt-7 sm:gap-x-5">
+                  {NAV_SECTIONS.map(({ id, label }) => (
+                    <button
+                      key={id}
+                      onClick={() => scrollToSection(id)}
+                      className="font-mono text-xs font-medium tracking-wide text-slate-500 transition hover:text-slate-800 dark:text-white/50 dark:hover:text-white/80"
+                    >
+                      {label}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
           </motion.div>
 

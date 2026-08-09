@@ -18,11 +18,11 @@ export function SectionShell({
     <section
       id={id}
       className={cn(
-        "flex min-h-[100svh] snap-start snap-always scroll-mt-0 items-center py-5 sm:py-10",
+        "flex min-h-[100svh] snap-start snap-always scroll-mt-0 items-center py-3 sm:py-10",
         className
       )}
     >
-      <div className="max-h-[calc(100svh-6.5rem)] w-full overflow-y-auto pr-1 sm:max-h-[calc(100svh-8rem)]">
+      <div className="w-full pr-0 sm:pr-1">
         {sectionNumber ? (
           <div className="mb-4 sm:mb-6">
             <span className="panel-surface-soft inline-flex min-w-12 items-center justify-center rounded-full px-2.5 py-1 font-mono text-[0.65rem] font-semibold tracking-[0.24em] text-[color:var(--panel-muted)] sm:min-w-14 sm:px-3 sm:py-1.5 sm:text-xs sm:tracking-[0.28em]">

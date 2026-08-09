@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   Eyebrow,
   SectionHeading,
@@ -10,7 +11,7 @@ const education = {
   school: "University of Florida",
   location: "Gainesville, FL",
   degree: "Bachelor of Science in Computer Science, Minor in Statistics",
-  graduation: "Expected Dec 2026",
+  graduation: "May 2026",
   coursework: [
     "Data Structures & Algorithms",
     "Object-Oriented Programming",
@@ -41,7 +42,16 @@ export default function EducationSection() {
       />
       <SurfaceCard className="space-y-4 sm:space-y-6">
         <div className="space-y-4">
-          <Eyebrow>{education.school}</Eyebrow>
+          <div className="flex items-center gap-3">
+            <Image
+              src="https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gatorzone.com/images/integration_2025/main_nav_logo.svg"
+              alt="University of Florida logo"
+              width={48}
+              height={48}
+              className="h-10 w-10 shrink-0 object-contain sm:h-12 sm:w-12"
+            />
+            <Eyebrow>{education.school}</Eyebrow>
+          </div>
           <div>
             <h3 className="text-xl font-semibold tracking-tight sm:text-2xl">
               {education.degree}

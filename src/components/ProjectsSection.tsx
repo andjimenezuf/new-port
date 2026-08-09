@@ -79,15 +79,15 @@ export default function ProjectsSection() {
         title="Projects"
         subtitle="A mix of hackathon work, personal products, and experiments across AI, mobile, and full-stack development."
       />
-      <div className="grid gap-5 px-1 pb-14 sm:gap-4 sm:px-0 sm:pb-6 md:grid-cols-2">
+      <div className="grid grid-cols-2 gap-2 px-0 pb-8 sm:gap-4 sm:px-0 sm:pb-6">
         {projects.map((project) => (
-          <SurfaceCard key={project.name} className="space-y-4 p-5 sm:space-y-5 sm:p-7">
+          <SurfaceCard key={project.name} className="space-y-2 p-3 sm:space-y-5 sm:p-7">
             <div className="flex flex-col gap-3 text-center sm:text-left lg:flex-row lg:items-start lg:justify-between">
               <div className="space-y-2">
                 <ShuffleText
                   as="h3"
                   text={project.name}
-                  className="text-xl font-semibold tracking-tight sm:text-2xl"
+                  className="text-sm font-semibold tracking-tight sm:text-2xl"
                 />
                 <div className="flex justify-center sm:justify-start">
                   <Eyebrow>{project.timeline}</Eyebrow>
@@ -102,7 +102,7 @@ export default function ProjectsSection() {
               ) : null}
             </div>
             <div className="space-y-3 sm:space-y-4">
-              <p className="text-sm leading-6 text-muted-foreground sm:text-base sm:leading-7">
+              <p className="hidden text-sm leading-6 text-muted-foreground sm:block sm:text-base sm:leading-7">
                 {project.description}
               </p>
               <p className="hidden text-sm leading-6 text-muted-foreground md:block">
