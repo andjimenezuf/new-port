@@ -8,6 +8,14 @@ import { ShuffleText } from "@/components/ui/shuffle-text";
 const experiences = [
   {
     title: "Software Engineer Intern",
+    company: "JPMorganChase",
+    duration: "Jun 2026 - Present",
+    location: "NYC",
+    description:
+      "Modernizing market data infrastructure powering trading desks, rebuilding the streaming data feed to reliably process 2B+ events per day.",
+  },
+  {
+    title: "Software Engineer Intern",
     company: "FIFA",
     duration: "Jun 2026 - Jul 2026",
     location: "Miami",
@@ -16,7 +24,7 @@ const experiences = [
   },
   {
     title: "Software Engineer Intern",
-    company: "JPMorgan Chase",
+    company: "JPMorganChase",
     duration: "Jun 2025 - Aug 2025",
     location: "NYC",
     description:
@@ -46,7 +54,7 @@ export default function ExperienceSection() {
       <div className="grid gap-4">
         {experiences.map((experience) => (
           <SurfaceCard
-            key={`${experience.company}-${experience.title}`}
+            key={`${experience.company}-${experience.title}-${experience.duration}`}
             className="space-y-3 p-4 sm:space-y-4 sm:p-7"
           >
             <div className="space-y-1.5">

@@ -172,7 +172,7 @@ export default function HeroNavMorph() {
               </motion.div>
               <div className="col-span-2 min-w-0 lg:col-span-1 lg:col-start-1 lg:row-start-2">
                 <p className="max-w-2xl text-xs leading-5 text-slate-600 sm:text-sm sm:leading-6 dark:text-white/70">
-                  I&apos;m a software engineer specializing in AI/ML. I&apos;m currently a student at the University of Florida, learning to create and contribute to the technological world for a better future.
+                  I&apos;m a software engineer specializing in AI/ML. I recently graduated from the University of Florida, and I&apos;m focused on creating and contributing to the technological world for a better future.
                 </p>
 
                 <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 pointer-events-auto sm:mt-7 sm:gap-x-5">
